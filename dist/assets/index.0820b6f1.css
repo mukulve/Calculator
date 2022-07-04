@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #202124;
+}
+.App {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+.calculator_buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  width: fit-content;
+}
+.calculator_answer {
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: #3c4043;
+  border: none;
+  color: #fff;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+  line-height: 1;
+}
+.calculator_answer i,
+.calculator_answer p {
+  padding: 0;
+}
+.calculator_answer i {
+  font-size: 1rem;
+}
+.calculator_buttons button {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: #3c4043;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 85px;
+  height: 36px;
+}
+.calculator_buttons button:nth-child(1),
+.calculator_buttons button:nth-child(2),
+.calculator_buttons button:nth-child(3),
+.calculator_buttons button:nth-child(4),
+.calculator_buttons button:nth-child(8),
+.calculator_buttons button:nth-child(12),
+.calculator_buttons button:nth-child(16),
+.calculator_buttons button:nth-child(20) {
+  background-color: #5f6368;
+}
+.calculator_buttons button:nth-child(19) {
+  background-color: #8ab4f8;
+  color: #000;
+}
+@media screen and (max-width: 365px) {
+  .calculator_buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .calculator_buttons button {
+    width: auto;
+    height: auto;
+  }
+  .calculator_buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    width: 100vw;
+  }
+}
